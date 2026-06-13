@@ -9,7 +9,9 @@ Luau packaged as a Python extension for Pyodide.
 
 This project demonstrates publishing a WebAssembly wheel to PyPI. The wheel contains a compiled CPython extension module that embeds the [Luau](https://luau.org/) compiler and VM. In Pyodide 314, `micropip` can install that PyPI wheel directly in the browser.
 
-Try the playground: <https://simonw.github.io/lua-wasm/>
+Try the playground: <https://simonw.github.io/luau-wasm/>
+
+Based on [this initial research project](https://github.com/simonw/research/tree/main/pluau-wasm-pyodide#readme).
 
 ## Installation
 
