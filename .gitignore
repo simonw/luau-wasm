@@ -1,6 +1,10 @@
 .venv
+.venv-pyodide/
+.build/
+.pyodide_build/
 __pycache__/
 *.py[cod]
+*.so
 *$py.class
 venv
 .eggs
@@ -9,4 +13,6 @@ venv
 .DS_Store
 dist
 build
+wheelhouse
 uv.lock
+default.profraw

@@ -1,0 +1,7 @@
+Vendored from luau-lang/luau.
+
+Repository: https://github.com/luau-lang/luau
+Commit: 91caa7311aa45cfe799f9e642e3c72e3ca34a64a
+
+Only the source needed by the Python extension is included:
+Common, Ast, Bytecode, Compiler, VM, and LICENSE.txt.

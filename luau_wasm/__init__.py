@@ -1,2 +1,5 @@
-def example_function():
-    return 1 + 1
+from ._luau import LuauError, execute
+
+run = execute
+
+__all__ = ["LuauError", "execute", "run"]

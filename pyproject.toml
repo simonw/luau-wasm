@@ -1,29 +1,50 @@
 [project]
 name = "luau-wasm"
-version = "0.1"
-description = "Luau packaged for Pyodide"
+version = "0.1a0"
+description = "Luau packaged as a Pyodide WebAssembly wheel"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{name = "Simon Willison"}]
-license = "Apache-2.0"
-classifiers = []
+license = "mit"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Software Development :: Interpreters",
+]
 dependencies = [
 
 ]
 
 [dependency-groups]
 dev = [
+    "build",
     "pytest"
 ]
 
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
+[tool.setuptools]
+packages = ["luau_wasm"]
+
+[tool.pyodide.build]
+cxxflags = "-fexceptions"
+ldflags = "-fexceptions"
+
+[tool.cibuildwheel]
+build = "cp314-pyodide_wasm32"
+
+[tool.cibuildwheel.pyodide]
+test-requires = ["pytest"]
+test-command = "python -m pytest {project}/tests -q"
 
 [project.urls]
 Homepage = "https://github.com/simonw/luau-wasm"
 Changelog = "https://github.com/simonw/luau-wasm/releases"
 Issues = "https://github.com/simonw/luau-wasm/issues"
 CI = "https://github.com/simonw/luau-wasm/actions"
-
+Playground = "https://simonw.github.io/lua-wasm/"
