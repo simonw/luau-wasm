@@ -40,7 +40,7 @@ jobs:
     steps:
     - uses: actions/checkout@v6
     - name: Build Pyodide wheel
-      uses: pypa/cibuildwheel@v3.4.0
+      uses: pypa/cibuildwheel@v4.1.0
       env:
         CIBW_PLATFORM: pyodide
     - name: Store Pyodide wheel

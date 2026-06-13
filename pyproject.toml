@@ -36,7 +36,7 @@ cxxflags = "-fexceptions"
 ldflags = "-fexceptions"
 
 [tool.cibuildwheel]
-build = "cp314-pyodide_wasm32"
+build = "cp314-*"
 
 [tool.cibuildwheel.pyodide]
 test-requires = ["pytest"]
